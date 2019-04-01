@@ -1,18 +1,18 @@
-# data Artisans Streaming Ledger
+# Ververica Stream Ledger
 
 ### Serializable ACID transactions on streaming data
 
-data Artisans Streaming Ledger is a library on top of [Apache Flink](https://flink.apache.org/), for processing event streams across multiple shared states/tables with Serializable ACID Semantics.
+Ververica Streaming Ledger is a library on top of [Apache Flink](https://flink.apache.org/), for processing event streams across multiple shared states/tables with Serializable ACID Semantics.
 
-Instead of operating on a single key in a single operator at a time (like in vanilla Apache Flink and other stream processors) data Artisans Streaming Ledger allows you to define a set of states, connect streams of events that drive the transactions, and apply flexible business logic that operates transactionally across those states.
+Instead of operating on a single key in a single operator at a time (like in vanilla Apache Flink and other stream processors) Ververica Streaming Ledger allows you to define a set of states, connect streams of events that drive the transactions, and apply flexible business logic that operates transactionally across those states.
 
 ## This repository contains the following `maven` modules:
 * `da-streamingledger-sdk` - The `SDK` needed to define a streaming ledger application.
 * `da-streamingledger-runtime-serial` - A simplistic serial runner, to experiment with the `SDK`.
 * `da-streamingledger-examples` - Streaming ledger example programs.
 
-A parallel runner exists as part of the dA platform,
-you can learn more about the dA platform here: [dA Platform](https://data-artisans.com/platform-overview)
+A parallel runner exists as part of the Ververica platform,
+you can learn more about the Ververica platform here: [Ververica Platform](https://www.ververica.com/platform-overview)
 
 ## Example
 
@@ -20,7 +20,7 @@ Let's create a simple ledger of user accounts.
 An account in the ledger is identified by a `String` key,
 and has a `Long` value (its balance).
 
-We start by defining the streaming ledger scope. All state definitions and transaction functions
+We start by defining the stream ledger scope. All state definitions and transaction functions
 would be bound to this named scope `"Account Ledger"`.
 
 ```java
@@ -64,7 +64,7 @@ final class TransactionEvent {
 }
 
 ```
-And we would like to transfer money from the source account to the target account, in response to an incoming `TransactionEvent`.
+And we would like to transfer money from the source account and the target account, in response to an incoming `TransactionEvent`.
 
 ```java
     DataStream<TransactionEvent> transactions = ...
@@ -110,7 +110,7 @@ Note that `TxnHandler` will be executed with the following guaranties:
 
 * *Consistency:* The transaction brings the tables from one consistent state into another consistent state.
 
-* *Isolation:* Each transaction executes as if it were the only transaction operating on the tables. Databases know different isolation levels with different guarantees. data Artisans Streaming Ledger here offers the best class: serializability.
+* *Isolation:* Each transaction executes as if it were the only transaction operating on the tables. Databases know different isolation levels with different guarantees. Ververica Streaming Ledger here offers the best class: serializability.
 
 * *Durability:* The changes made by a transaction are durable and are not lost. Durability is ensured in the same way as in other Flink applications – through persistent sources and checkpoints. In the asynchronous nature of stream processing, durability of a result can only be assumed after a checkpoint.
 
@@ -131,7 +131,7 @@ cd da-streamingledger
 mvn clean install
 ```
 
-data Artisans Streaming Ledger is now available at your local `.m2` repository.
+Ververica Streaming Ledger is now available at your local `.m2` repository.
 
 ## Obtaining from Maven Central
 
@@ -152,5 +152,5 @@ Just add the following dependency to start experimenting with the `SDK`
 
 ## License 
 
-The code in this repository is under the Apache license, see [license](https://github.com/dataArtisans/da-streamingledger/blob/master/LICENSE)
+The code in this repository is under the Apache license, see [license](https://github.com/ververica/streaming-ledger/blob/master/LICENSE)
 
