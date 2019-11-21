@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright 2018 Data Artisans GmbH
+  Copyright 2018 Ververica GmbH
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -19,25 +19,25 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.data-artisans.streamingledger</groupId>
-    <artifactId>da-streamingledger</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <groupId>com.ververica.streamingledger</groupId>
+    <artifactId>streamingledger</artifactId>
+    <version>2.0-SNAPSHOT</version>
 
-    <name>da-streamingledger</name>
+    <name>streamingledger</name>
     <packaging>pom</packaging>
 
     <description>Serializable ACID transactions on streaming data</description>
-    <url>http://data-artisans.com</url>
+    <url>http://ververica.com</url>
     <scm>
-        <url>https://github.com/dataArtisans/da-streamingledger</url>
+        <url>https://github.com/ververica/streamingledger</url>
     </scm>
 
     <developers>
         <developer>
             <id>jdoe</id>
-            <email>info@data-artisans.com</email>
-            <url>http://data-artisans.com/</url>
-            <organization>data Artisans</organization>
+            <email>info@ververica.com</email>
+            <url>http://ververica.com/</url>
+            <organization>Ververica</organization>
         </developer>
     </developers>
 
@@ -59,6 +59,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <flink.version>1.6.0</flink.version>
+        <scala.version>2.11</scala.version>
         <bytebuddy.version>1.8.0</bytebuddy.version>
         <findbugs-annotations.version>3.0.1</findbugs-annotations.version>
     </properties>
@@ -66,9 +67,9 @@
     <!--          MODULES          -->
 
     <modules>
-        <module>da-streamingledger-sdk</module>
-        <module>da-streamingledger-runtime-serial</module>
-        <module>da-streamingledger-examples</module>
+        <module>streamingledger-sdk</module>
+        <module>streamingledger-runtime-serial</module>
+        <module>streamingledger-examples</module>
     </modules>
 
     <!--        DEPENDENCIES       -->
@@ -267,7 +268,7 @@
                     <numUnapprovedLicenses>0</numUnapprovedLicenses>
                     <licenses>
                         <license implementation="org.apache.rat.analysis.license.AppliedApacheSoftwareLicense20">
-                            <copyrightOwner>Data Artisans GmbH</copyrightOwner>
+                            <copyrightOwner>Ververica GmbH</copyrightOwner>
                         </license>
                     </licenses>
                     <licenseFamilies>
