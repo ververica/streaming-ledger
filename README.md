@@ -7,9 +7,9 @@ Ververica Streaming Ledger is a library on top of [Apache Flink](https://flink.a
 Instead of operating on a single key in a single operator at a time (like in vanilla Apache Flink and other stream processors) Ververica Streaming Ledger allows you to define a set of states, connect streams of events that drive the transactions, and apply flexible business logic that operates transactionally across those states.
 
 ## This repository contains the following `maven` modules:
-* `da-streamingledger-sdk` - The `SDK` needed to define a streaming ledger application.
-* `da-streamingledger-runtime-serial` - A simplistic serial runner, to experiment with the `SDK`.
-* `da-streamingledger-examples` - Streaming ledger example programs.
+* `streamingledger-sdk` - The `SDK` needed to define a streaming ledger application.
+* `streamingledger-runtime-serial` - A simplistic serial runner, to experiment with the `SDK`.
+* `streamingledger-examples` - Streaming ledger example programs.
 
 A parallel runner exists as part of the Ververica platform,
 you can learn more about the Ververica platform here: [Ververica Platform](https://www.ververica.com/platform-overview)
@@ -126,8 +126,8 @@ prerequisites:
 * At least Java 8
 
 ```
-git clone https://github.com/dataArtisans/da-streamingledger.git
-cd da-streamingledger
+git clone https://github.com/ververica/streamingledger.git
+cd streamingledger
 mvn clean install
 ```
 
@@ -141,12 +141,12 @@ Just add the following dependency to start experimenting with the `SDK`
 <dependency>
   <groupId>com.data-artisans.streamingledger</groupId>
   <artifactId>da-streamingledger-sdk</artifactId>
-  <version>1.0.0</version>
+  <version>2.0-SNAPSHOT</version>
 </dependency>
 <dependency>
-  <groupId>com.data-artisans.streamingledger</groupId>
-  <artifactId>da-streamingledger-runtime-serial</artifactId>
-  <version>1.0.0</version>
+  <groupId>com.ververica.streamingledger</groupId>
+  <artifactId>streamingledger-runtime-serial</artifactId>
+  <version>2.0-SNAPSHOT</version>
 </dependency>
 ```
 

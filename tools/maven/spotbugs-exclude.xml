@@ -23,27 +23,27 @@ under the License.
         xmlns="https://github.com/spotbugs/filter/3.0.0"
         xsi:schemaLocation="https://github.com/spotbugs/filter/3.0.0 https://raw.githubusercontent.com/spotbugs/spotbugs/3.1.0/spotbugs/etc/findbugsfilter.xsd">
     <Match>
-        <Package name="~com\.dataartisans\.streamingledger\.sdk\.api.*"/>
+        <Package name="~com\.ververica\.streamingledger\.sdk\.api.*"/>
         <Bug pattern="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"/>
     </Match>
     <Match>
-        <Package name="~com\.dataartisans\.streamingledger\.sdk\.spi.*"/>
+        <Package name="~com\.ververica\.streamingledger\.sdk\.spi.*"/>
         <Bug pattern="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"/>
     </Match>
     <Match>
-        <Class name="com.dataartisans.streamingledger.sdk.spi.ParallelTransactionRuntimeProvider"/>
+        <Class name="com.ververica.streamingledger.sdk.spi.ParallelTransactionRuntimeProvider"/>
         <Bug pattern="SIC_INNER_SHOULD_BE_STATIC_ANON"/>
     </Match>
     <Match>
-        <Package name="~com\.dataartisans\.streamingledger\.examples.*"/>
+        <Package name="~com\.ververica\.streamingledger\.examples.*"/>
         <Bug pattern="SE_NO_SERIALVERSIONID"/>
     </Match>
     <Match>
-        <Package name="~com\.dataartisans\.streamingledger.*"/>
+        <Package name="~com\.ververica\.streamingledger.*"/>
         <Bug pattern="SE_TRANSIENT_FIELD_NOT_RESTORED"/>
     </Match>
     <Match>
-        <Package name="~com\.dataartisans\.streamingledger.*"/>
+        <Package name="~com\.ververica\.streamingledger.*"/>
         <Bug pattern="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR"/>
     </Match>
 </FindBugsFilter>
