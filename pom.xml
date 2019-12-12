@@ -58,7 +58,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <flink.version>1.6.0</flink.version>
+        <flink.version>1.9.0</flink.version>
         <scala.version>2.11</scala.version>
         <bytebuddy.version>1.8.0</bytebuddy.version>
         <findbugs-annotations.version>3.0.1</findbugs-annotations.version>
